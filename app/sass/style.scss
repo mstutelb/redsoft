@@ -1,0 +1,20 @@
+// часть библиотеки только для scaffolding и normalize
+@import "bootstrap/bootstrap";
+
+@import "../fonts/stylesheet";
+
+// свой миксин для сеток
+@import "grid";
+@import "vars/colors";
+@import "vars/icons";
+
+@import "main";
+@import "blocks/btns";
+
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/search";
+@import "blocks/footer";
+
+@import "blocks/category";
+@import "blocks/product-list";

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Template</title>
+
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- ******** begin header ******** -->
+    <header class="header">
+      <div class="header__content content">
+        <a href="/" class="header__logo"><img width="48" src="img/logo.svg" alt="Логотип"></a>
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">Каталог</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Доставка</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Оплата</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">О галерее</a></li>
+          </ul>
+        </nav>
+        <div class="header__search search">
+          <form class="search__form" action="">
+            <input class="search__input" type="text" placeholder="Поиск по названию картины">
+            <button class="search__submit btn-1">Найти</button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <!-- ******** end header ******** -->
+
+
+
+    <!-- ******** begin main ******** -->
+    <main class="main">
+
+      <!-- ******** begin category ******** -->
+      <section class="category">
+        <div class="category__content content">
+          <h1 class="category__title">Картины эпохи Возрождения</h1>
+          <ul class="category__product-list product-list">
+            <li class="product-list__item">
+              <img class="product-list__img" src="img/painting-63186_12801.jpg" alt="venera">
+              <div class="product-list__info">
+                <h2 class="product-list__name">«Рождение Венеры» Сандро Боттичелли</h2>
+                <div class="product-list__bottom">
+                  <div class="product-list__price-wrap">
+                    <div class="product-list__promo">2 000 000 $</div>
+                    <div class="product-list__price">1 000 000 $</div>
+                  </div>
+                  <button type="button" data-id="1" class="product-list__buy btn-1 js-buy">Купить</button>
+                </div>
+              </div>
+            </li>
+            <li class="product-list__item">
+              <img class="product-list__img" src="img/painting-63186_12802.jpg" alt="venera">
+              <div class="product-list__info">
+                <h2 class="product-list__name">«Тайная вечеря» Леонардо да Винчи</h2>
+                <div class="product-list__bottom">
+                  <div class="product-list__price-wrap">
+                    <div class="product-list__price">3 000 000 $</div>
+                  </div>
+                  <button type="button" data-id="2" class="product-list__buy btn-1 js-buy">Купить</button>
+                </div>
+              </div>
+            </li>
+            <li class="product-list__item">
+              <img class="product-list__img" src="img/image-191.jpg" alt="venera">
+              <div class="product-list__info">
+                <h2 class="product-list__name">«Сотворение Адама»
+                  Микеланджело</h2>
+                <div class="product-list__bottom">
+                  <div class="product-list__price-wrap">
+                    <div class="product-list__promo">6 000 000 $</div>
+                    <div class="product-list__price">5 000 000 $</div>
+                  </div>
+                  <button type="button" data-id="3" class="product-list__buy btn-1 js-buy">Купить</button>
+                </div>
+              </div>
+            </li>
+            <li class="product-list__item product-list__item_state_sold">
+              <img class="product-list__img" src="img/201523101423301.png" alt="venera">
+              <div class="product-list__info">
+                <h2 class="product-list__name">«Урок анатомии» Рембрандт</h2>
+                <div class="product-list__bottom">
+                  <div class="product-list__price-wrap">
+                    <div class="product-list__sold">Продана на аукционе</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- ******** end category ******** -->
+
+
+    </main>
+    <!-- ******** end main ******** -->
+
+    <!-- ******** begin footer ******** -->
+    <footer class="footer">
+      <div class="footer__content content">
+        <a href="/" class="footer__logo"><img src="img/logo_footer.svg" alt="logo"></a>
+        <div class="footer__nav">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Каталог</a></li>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Доставка</a>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Оплата</a>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Контакты</a>
+            <li class="footer__nav-item"><a href="#" class="footer__nav-link">О галерее</a>
+            </li>
+          </ul>
+        </div>
+        <ul class="footer__contacts">
+          <li class="footer__contacts-item"><i class="icon-phone footer__icon-phone"></i><a
+              class="footer__contacts-link" href="tel:+7(495)555-55-55">+7 (495) 555-55-55</a></li>
+          <li class="footer__contacts-item"><i class="icon-mark footer__icon-mark"></i>г. Москва, ул. Расплетина, 24
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <!-- ******** end footer ******** -->
+
+  </div>
+
+  <script>
+    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+      document.write('<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"><\/script>');
+    }
+  </script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/main-min.js"></script>
+</body>
+
+</html>

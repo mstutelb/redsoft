@@ -1,0 +1,18 @@
+.header{
+  border: 1px solid $border-color;
+  &__content{
+    display: flex;
+    align-items: center;
+    height: 96px;
+  }
+  &__logo{
+    margin-right: 48px;
+  }
+  &__nav{
+    margin-right: 20px;
+  }
+  &__search{
+    margin-left: auto;
+  }
+
+}

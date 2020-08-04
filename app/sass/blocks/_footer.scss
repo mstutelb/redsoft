@@ -1,0 +1,51 @@
+.footer{
+  background: #ECEAEA;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  &__content{
+    display: flex;
+    flex-wrap: wrap;
+    height: 96px;
+    align-items: center;
+  }  
+  &__logo{
+    margin-right: 48px;
+  }
+  &__nav{}
+  &__nav-list{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__nav-item{
+    margin-right: 49px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  &__nav-link{
+    color: $brown;
+    font-size: 14px;
+  }
+  &__contacts{
+    list-style-type: none;
+    margin-left: auto;
+    display: flex;
+  }
+  &__contacts-item{
+    color: $brown;
+    margin-right: 52px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  &__contacts-link{
+    color: $brown;
+  }
+  &__icon-phone, &__icon-mark{
+    vertical-align: middle;
+    margin-right: 9px;
+  }
+}

@@ -1,0 +1,18 @@
+$cols: 12;						//
+$offset: 30;				// px
+$offset-md: 15; 			// px
+$offset-sm: 10; 			// px
+
+@mixin col($size, $off: $offset, $col: $cols){
+	width: calc((100% +  #{$off}px)/#{$col}*#{$size} - #{$off}px);
+}
+
+@mixin colm($size, $off: $offset, $col: $cols){
+  width: calc((100%)/#{$col}*#{$size} - #{$off}px);
+}
+	
+@for $i from 1 through $cols{
+  .col-#{$i}{
+    @include col(#{$i});
+  }
+}

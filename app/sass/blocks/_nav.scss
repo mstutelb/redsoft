@@ -1,0 +1,16 @@
+.nav{
+  &__list{
+    list-style-type: none;
+    display: flex;
+  }
+  &__item{
+    margin-right: 49px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  &__link{
+    color: $black;
+    font-size: 14px;
+  }
+}

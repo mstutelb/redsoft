@@ -1,0 +1,24 @@
+.search{
+  &__form{
+    display: flex;
+  }
+  &__input{
+    border: 1px solid $border-color;
+    border-right: none;
+    font-size: 14px;
+    outline: none;
+    width: 294px;
+    padding: 14px 16px 13px;
+    background: transparent;
+    &::placeholder{
+      color: #9F9F9F;
+      border-radius: 0;
+    }
+    &:focus{
+      border-color: #B5B5B5;
+    }
+  } 
+  &__submit{
+    width: 122px;;
+  }
+}
