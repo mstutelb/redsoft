@@ -13,6 +13,7 @@ const setCartData = function (o) {
 
 const changeButton = function (button) {
   button.innerText = 'В корзине';
+  button.disabled = true;
   button.classList.remove('loading', 'btn-1', 'js-buy');
   button.classList.remove('btn-1');
   button.classList.remove('js-buy');
@@ -26,8 +27,9 @@ const checkProduct = function () {
   const cartData = getCartData() || {};
   for (let i = 0; i < buttons.length; i++) {
     const id = buttons[i].dataset.id;
+    const button = buttons[i];
     if (cartData.hasOwnProperty(id)) {
-      changeButton(buttons[i]);
+      changeButton(button);
     }
   }
 };
@@ -36,7 +38,6 @@ checkProduct();
 
 // реализация добавления в корзину
 const addToCart = function (id) {
-
   // получаем данные корзины или создаём новый объект, если данных еще нет
   var cartData = getCartData() || {};
 
@@ -44,9 +45,7 @@ const addToCart = function (id) {
   if (!cartData.hasOwnProperty(id)) {
     cartData[id] = id;
   }
-
   setCartData(cartData)// Обновляем данные в LocalStorage
-
   return false;
 }
 
@@ -64,13 +63,11 @@ document.addEventListener('click', function (evt) {
     // загружем с сервера. 
 
     // реализация через fetch
-    
     // let productData = window.fetch('https://jsonplaceholder.typicode.com/posts/1');
     // productData.then( function(response){
     //   addToCart(id); // добавляем в корзину
-    //   changeButton(button); // меняем состояние кнопо к
+    //   changeButton(button); // меняем состояние кнопок
     // });
-
 
     axios.get('https://jsonplaceholder.typicode.com/posts/1')
       .then(function (response) {
@@ -86,3 +83,14 @@ document.addEventListener('click', function (evt) {
 
 });
 
+// блокировка обработчика перехода по кнопке купить
+const products = document.querySelectorAll('.product-list__item a');
+for(let i = 0; i< products.length; i++){
+  const item = products[i];
+  item.addEventListener('click', function(evt){
+    if (evt.target.classList.contains('js-buy')) {
+      evt.preventDefault();
+    }
+  });
+}
+// END блокировка обработчика перехода по кнопке купить

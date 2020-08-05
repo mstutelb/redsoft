@@ -10,6 +10,8 @@
     border: 1px solid $border-color;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
     &_state{
       &_sold{
         opacity: 0.5;
@@ -18,6 +20,9 @@
   }
   &__img{
     max-width: 100%;
+    width: 100%;
+    height: auto;
+    // display: inline-block;
   }
   &__info{
     padding: 20px 24px 24px;
@@ -25,10 +30,10 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    width: 280px;
   } 
   &__name{
     margin-bottom: 21px;
+    color: $black;
   }
   &__bottom{
     display: flex;
@@ -48,6 +53,7 @@
   &__price{
     font-weight: bold;
     font-size: 16px;
+    color: $black;
   }
   &__sold{
     font-size: 16px;
@@ -57,5 +63,14 @@
   &__buy{
     max-width: 118px;
     margin-left: 10px;
+  }
+}
+
+@media(max-width: 1260px){
+  .product-list{
+    &__info{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
 }

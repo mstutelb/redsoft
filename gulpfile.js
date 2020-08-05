@@ -62,7 +62,7 @@ gulp.task('sass', function () {
   return gulp.src('app/sass/**/*.+(scss|sass|css)')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer(['last 15 versions', '>1%', 'ie 11'], { cascade: true }))
-    // .pipe(cssnano())
+    .pipe(cssnano())
     .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.stream());
 });

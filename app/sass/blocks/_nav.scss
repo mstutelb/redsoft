@@ -12,5 +12,8 @@
   &__link{
     color: $black;
     font-size: 14px;
+    &:hover{
+      color: lighten($color: $brown, $amount: 20);
+    }
   }
 }
